@@ -32,7 +32,10 @@
         </div>
         <p class="mt-3">本日の日付</p>
 	<div>
-		<form id="submit_form" method="post" action="#">
+	    <input class="form-control w-100 mt-1" name="date" required>
+
+	<!--
+ 	<form id="submit_form" method="post" action="#">
 		<select id="submit_date" name="date">		
 		<option value="火曜">2/9</option>
 		<option value="水曜">2/10</option>
@@ -41,10 +44,6 @@
 		<option value="土曜">2/13</option>
 	</select>
 	</form>
-
-	<!--
-	    <input class="form-control w-100 mt-1" name="date" required>
-
 		<select id="dateid" name="date">
 	  		<option value="火曜">2/9</option>
 			<option value="水曜">2/10</option>
@@ -113,7 +112,6 @@
 	  alert($(this).val());
 		console.log($(this).val());
 	});
-	-->
 	<script type="text/javascript">
 	$(function(){
 		$("#submit_date").change(function(){
@@ -121,6 +119,7 @@
 		});
 	});
 	</script>
+	-->
 	
         $(function () {
             $('form').submit(function () {
