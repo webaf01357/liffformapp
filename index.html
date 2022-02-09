@@ -33,7 +33,7 @@
         <p class="mt-3">本日の日付</p>
 
 	    <form method="post" action="">
-		    <select name="date">
+		    <select name="select_date">
 			    <option value="1">2/9</option>
 			    <option value="2">2/10</option>
 			    <option value="3">2/11</option>
@@ -43,7 +43,7 @@
 	    window.addEventListener('DOMContentLoaded', function(){
 
 	// select要素を取得
-	var select_date = document.querySelector("select[name=date]");
+	var select_date = document.querySelector("select[name=select_date]");
 
 	select_date.addEventListener('change',function(){
 		console.log(select_date.value);
