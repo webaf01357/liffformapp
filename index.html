@@ -32,9 +32,28 @@
         </div>
         <p class="mt-3">本日の日付</p>
 	<div>
+		<script>
+		jQuery(function(){
+			jQuery("#date").change(function(){
+				alert(jQuery(this).val());
+				jQuery("#date").submit();
+			});
+		});
+		</script>
+
+	<form id="date" action="example" method="post">
+		<select id="date">
+	  		<option value="火曜">2/9</option>
+			<option value="水曜">2/10</option>
+			<option value="木曜">2/11</option>
+			<option value="金曜">2/12</option>
+			<option value="土曜">2/13</option>
+		</select>
+		</form>
+
 	<!--
 	    <input class="form-control w-100 mt-1" name="date" required>
-	-->	
+
 		<select id="dateid" name="date">
 	  		<option value="火曜">2/9</option>
 			<option value="水曜">2/10</option>
@@ -42,13 +61,14 @@
 			<option value="金曜">2/12</option>
 			<option value="土曜">2/13</option>
 		</select>		
-	<!--
+		
 	<label for="select_date">本日の日付：</label><br />
     		<select id="sex" name="select_date">
 		      	<option value="火曜">2/9</option>
 			<option value="水曜">2/10</option>
 			<option value="木曜">2/11</option>
-	</select>-->
+	</select>
+	-->
 	  </div>   
           <input type="submit" class="mt-4 btn btn-primary" value="送信">
     </form>
@@ -97,12 +117,12 @@
 		    console.log($('#select_date').val());
 	})
 	});
-	-->
+
 	$('#dateid').on('click',function() {
 	  alert($(this).val());
 		console.log($(this).val());
 	});
-	    
+	-->	    
         $(function () {
             $('form').submit(function () {
                 const name    = $('input[name="name"]').val();
