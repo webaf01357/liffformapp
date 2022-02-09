@@ -32,23 +32,17 @@
         </div>
         <p class="mt-3">本日の日付</p>
 
-	    <form method="post" action="">
-		    <select name="select_date">
-			    <option value="1">2/9</option>
-			    <option value="2">2/10</option>
-			    <option value="3">2/11</option>
+	<form id="my-form">
+ 		 <select name="select_date">
+		    <option value="A">2/9</option>
+		    <option value="B" selected>2/10</option>
+		    <option value="C">2/11</option>
 	  </select>
-	  </form>
+	</form>
 
-	    window.addEventListener('DOMContentLoaded', function(){
-
-	// select要素を取得
-	var select_date = document.querySelector("select[name=select_date]");
-
-	select_date.addEventListener('change',function(){
-		console.log(select_date.value);
-	    });
-	    });  
+	var text = $('#my-form [name=select_date] option:selected').text();
+	console.log(text);  // => "This is B"
+	    
 	    
 	<!--
  	<select id="fruit">
