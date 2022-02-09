@@ -31,25 +31,39 @@
             <input class="form-control w-100 mt-1" name="sukuwat" required>
         </div>
         <p class="mt-3">本日の日付</p>
-	  <select id="sel1" >
-		<option value="01">2/9</option>
-    		<option value="02">2/10</option>
-    		<option value="03">2/11</option>
-  	</select>  
-	
-	<input type="button" value="ボタン" onclick="getSelectLabel('sel1');">
-
+	<select id="fruit">
+		<option value="orange">Orange</option>
+		<option value="lemon">Lemon</option>
+		<option value="strawberry">Strawberry</option>
+	</select>
+	<div>
+	<input type="button" value="Check" id="checkButton">
+	</div>
 	    
-	<!--
+	<script>
+	function butotnClick(){
+  	console.log('選択されているのは ' + fruitSelect.value + ' です');
+	}
+
+	let fruitSelect = document.getElementById('fruit');
+	fruitSelect.options[2].selected = true;
+
+	let checkButton = document.getElementById('checkButton');
+	checkButton.addEventListener('click', butotnClick);
+	</script>
+
+	<!--	        
     	<div class="form-group">
             <label for="exampleFormControlSelect1">Example select</label>
             <select class="form-control" id="exampleFormControlSelect1" name="select" required>>
-                <option>2/9</option>
-                <option>2/10</option>
-                <option>2/11</option>
-                <option>2/12</option>
-                <option>2/13</option>
+                <option value="1st">2/9</option>
+                <option value="2nd">2/10</option>
+                <option value="3rd">2/11</option>
+                <option value="4th">2/12</option>
+                <option value="5th">2/13</option>
         </select>
+	let element = document.getElementById('myselect');
+	console.log(element.value);
 
 	let select = document.querySelector('[name="select"]');
 	select.onchange = event => { 
@@ -117,11 +131,11 @@
                 const fukkin  = $('input[name="fukkin"]').val();
                 const haikin  = $('input[name="haikin"]').val();
                 const sukuwat = $('input[name="sukuwat"]').val();
-                const sel1 = $('input[name="sel1"]').val();
+                const sel1 = $('input[name="fruit"]').val();
                 <!--
                 const date = $('input[name="date"]').val();
                 -->
-                const msg = `${name}\n${udetate}\n${fukkin}\n${haikin}\n${sukuwat}\n${sel1}`;
+                const msg = `${name}\n${udetate}\n${fukkin}\n${haikin}\n${sukuwat}\n${fruit}`;
                 
                 //const msg = `${name}\n${udetate}\n${fukkin}\n${haikin}\n${sukuwat}`;
                 sendText(msg);
