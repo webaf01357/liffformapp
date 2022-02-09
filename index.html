@@ -32,9 +32,18 @@
         </div>
         <p class="mt-3">本日の日付</p>
     	<div>
-	    <input class="form-control w-100 mt-1" name="date" required>
-      
-      </div>   
+	<!--<input class="form-control w-100 mt-1" name="date" required>-->
+
+	<input name="textfield" type="text" class="textField" id="tField0">
+	<select name="select" class="bsize" id="selBox0" onChange="getSelect(0,this.value)">
+		<option value="2/9">2/9</option>
+		<option value="2/10">2/10</option>
+		<option value="2/11">2/11</option>
+	</select>
+	<input type="button" class="bsize" value="ボタン" onclick="getText(0)">
+	<!--<input class="form-control w-100 mt-1" name="sukuwat" required>-->
+		
+	</div>   
       <input type="submit" class="mt-4 btn btn-primary" value="送信">
     </form>
 
