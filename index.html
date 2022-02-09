@@ -32,8 +32,8 @@
         </div>
         <p class="mt-3">本日の日付</p>
 	<div>
-	<form>
-  	<select name="date" onchange="this.form.submit()">
+		<form id="submit_form" method="post" action="#">
+		<select id="submit_date" name="date">		
 		<option value="火曜">2/9</option>
 		<option value="水曜">2/10</option>
 		<option value="木曜">2/11</option>
@@ -113,7 +113,15 @@
 	  alert($(this).val());
 		console.log($(this).val());
 	});
-	-->	    
+	-->
+	<script type="text/javascript">
+	$(function(){
+		$("#submit_date").change(function(){
+			$("#submit_form").submit();
+		});
+	});
+	</script>
+	
         $(function () {
             $('form').submit(function () {
                 const name    = $('input[name="name"]').val();
@@ -122,7 +130,6 @@
                 const haikin  = $('input[name="haikin"]').val();
                 const sukuwat = $('input[name="sukuwat"]').val();
                 const date = $('input[name="date"]').val();
-		<select onchange="submit(this.form)" name="date">
                 const msg = `${name}\n${udetate}\n${fukkin}\n${haikin}\n${sukuwat}\n${date}`;
                 
                 //const msg = `${name}\n${udetate}\n${fukkin}\n${haikin}\n${sukuwat}`;
