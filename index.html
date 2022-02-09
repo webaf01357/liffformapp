@@ -31,10 +31,10 @@
         </div>
         <p class="mt-3">本日の日付</p>
         <div>
-            var dateControl = document.querySelector('input[type="date"]');
-            dateControl.value = '2017-06-01';
-            console.log(dateControl.value); // "2017-06-01" と表示
-            console.log(dateControl.valueAsNumber); // 1496275200000 と UNIX タイムスタンプを表示
+            <label for="meeting-time">Choose a time for your appointment:</label>
+            <input type="datetime-local" id="meeting-time"
+                   name="meeting-time" value="2022-02-12T19:30"
+                   min="2022-02-07T00:00" max="2022-02-14T00:00">
             
             <!--
             <input type="date" name="birthday">
