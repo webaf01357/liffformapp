@@ -32,7 +32,7 @@
         <p class="mt-3">本日の日付</p>
         <div class="form-group">
             <label for="exampleFormControlSelect1">Example select</label>
-            <select class="form-control" id="exampleFormControlSelect1">
+            <select class="form-control" id="exampleFormControlSelect1" name="select" required>>
                 <option>2/9</option>
                 <option>2/10</option>
                 <option>2/11</option>
@@ -99,9 +99,11 @@
                 const fukkin  = $('input[name="fukkin"]').val();
                 const haikin  = $('input[name="haikin"]').val();
                 const sukuwat = $('input[name="sukuwat"]').val();
+                const select = $('input[name="select"]').val();
+                <!--
                 const date = $('input[name="date"]').val();
-                
-                const msg = `${name}\n${udetate}\n${fukkin}\n${haikin}\n${sukuwat}\n${date}`;
+                -->
+                const msg = `${name}\n${udetate}\n${fukkin}\n${haikin}\n${sukuwat}\n${select}`;
                 
                 //const msg = `${name}\n${udetate}\n${fukkin}\n${haikin}\n${sukuwat}`;
                 sendText(msg);
