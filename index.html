@@ -31,7 +31,27 @@
             <input class="form-control w-100 mt-1" name="sukuwat" required>
         </div>
         <p class="mt-3">本日の日付</p>
-	<select id="fruit">
+
+	    <form method="post" action="">
+		    <select name="date">
+			    <option value="1">2/9</option>
+			    <option value="2">2/10</option>
+			    <option value="3">2/11</option>
+	  </select>
+	  </form>
+
+	    window.addEventListener('DOMContentLoaded', function(){
+
+	// select要素を取得
+	var select_date = document.querySelector("select[name=date]");
+
+	select_date.addEventListener('change',function(){
+		console.log(select_date.value);
+	    });
+	    });  
+	    
+	<!--
+ 	<select id="fruit">
 		<option value="orange">Orange</option>
 		<option value="lemon">Lemon</option>
 		<option value="strawberry">Strawberry</option>
@@ -51,7 +71,8 @@
 	let checkButton = document.getElementById('checkButton');
 	checkButton.addEventListener('click', butotnClick);
 	</script>
-
+	-->
+	
 	<!--	        
     	<div class="form-group">
             <label for="exampleFormControlSelect1">Example select</label>
@@ -131,11 +152,8 @@
                 const fukkin  = $('input[name="fukkin"]').val();
                 const haikin  = $('input[name="haikin"]').val();
                 const sukuwat = $('input[name="sukuwat"]').val();
-                const fruit = $('input[name="fruit"]').val();
-                <!--
-                const date = $('input[name="date"]').val();
-                -->
-                const msg = `${name}\n${udetate}\n${fukkin}\n${haikin}\n${sukuwat}\n${fruit}`;
+                const select_date = $('input[name="select_date"]').val();
+                const msg = `${name}\n${udetate}\n${fukkin}\n${haikin}\n${sukuwat}\n${select_date}`;
                 
                 //const msg = `${name}\n${udetate}\n${fukkin}\n${haikin}\n${sukuwat}`;
                 sendText(msg);
